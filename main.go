@@ -4,6 +4,7 @@ import (
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/aws/jsii-runtime-go"
 	"github.com/caarlos0/env"
+	"github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kubernetescluster"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -30,10 +31,18 @@ func init() {
 	}
 }
 
-func NewCluster(scope constructs.Construct, id string) cdktf.TerraformStack {
+func K8sStack(scope constructs.Construct, id string) cdktf.TerraformStack {
 	stack := cdktf.NewTerraformStack(scope, &id)
 
-	// The code that defines your stack goes here
+	nodePool := kubernetescluster.NewKubernetesDefault(stack, jsii.String("node-pool"), &kubernetescluster.KubernetesClusterNodePoolConfig{})
+
+	cluster := kubernetescluster.NewKubernetesCluster(scope, jsii.String("demo"), &kubernetescluster.KubernetesClusterConfig{
+		Name: jsii.String("demo"),
+	})
+
+	cdktf.NewTerraformOutput(stack, jsii.String("kubeconfig"), &cdktf.TerraformOutputConfig{
+		Value: cluster.KubeConfigRaw(),
+	})
 
 	return stack
 }
@@ -41,7 +50,7 @@ func NewCluster(scope constructs.Construct, id string) cdktf.TerraformStack {
 func main() {
 	app := cdktf.NewApp(nil)
 
-	stack := NewCluster(app, "example")
+	stack := K8sStack(app, "example")
 
 	cdktf.NewAzurermBackend(stack, &cdktf.AzurermBackendConfig{
 		ResourceGroupName:  jsii.String(cfg.ResourceGroupName),

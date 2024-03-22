@@ -55,6 +55,7 @@ github.com/GaijinEntertainment/go-exhaustruct/v3 v3.2.0 h1:sATXp1x6/axKxz2Gjxv8M
 github.com/GaijinEntertainment/go-exhaustruct/v3 v3.2.0/go.mod h1:Nl76DrGNJTA1KJ0LePKBw/vznBX1EHbAZX8mwjR82nI=
 github.com/Masterminds/semver v1.5.0 h1:H65muMkzWKEuNDnfl9d70GUjFniHKHRbFPGBuZ3QEww=
 github.com/Masterminds/semver v1.5.0/go.mod h1:MB6lktGJrhw8PrUyiEoblNEGEQ+RzHPF078ddwwvV3Y=
+github.com/Masterminds/semver/v3 v3.1.1/go.mod h1:VPu/7SZ7ePZ3QOrcuXROw5FAcLl4a0cBrbBpGY/8hQs=
 github.com/Masterminds/semver/v3 v3.2.1 h1:RN9w6+7QoMeJVGyfmbcgs28Br8cvmnucEXnY0rYXWg0=
 github.com/Masterminds/semver/v3 v3.2.1/go.mod h1:qvl/7zhW3nngYb5+80sSMF+FG2BjYrf8m9wsX0PNOMQ=
 github.com/OpenPeeDeeP/depguard/v2 v2.2.0 h1:vDfG60vDtIuf0MEOhmLlLLSzqaRM8EMcgJPdp74zmpA=
@@ -80,8 +81,12 @@ github.com/ashanbrown/forbidigo v1.6.0 h1:D3aewfM37Yb3pxHujIPSpTf6oQk9sc9WZi8ger
 github.com/ashanbrown/forbidigo v1.6.0/go.mod h1:Y8j9jy9ZYAEHXdu723cUlraTqbzjKF1MUyfOKL+AjcU=
 github.com/ashanbrown/makezero v1.1.1 h1:iCQ87C0V0vSyO+M9E/FZYbu65auqH0lnsOkf5FcB28s=
 github.com/ashanbrown/makezero v1.1.1/go.mod h1:i1bJLCRSCHOcOa9Y6MyF2FTfMZMFdHvxKHxgO5Z1axI=
+github.com/aws/constructs-go/constructs/v10 v10.1.66/go.mod h1:nJzXC/q76n0XkbL76eG0OvJQwbD/lWc7sjerJEARubA=
+github.com/aws/constructs-go/constructs/v10 v10.1.113/go.mod h1:utyhwXdG4CxzHORjVi92o3h0x8H59sZZqSR3dsrzp8w=
 github.com/aws/constructs-go/constructs/v10 v10.3.0 h1:LsjBIMiaDX/vqrXWhzTquBJ9pPdi02/H+z1DCwg0PEM=
 github.com/aws/constructs-go/constructs/v10 v10.3.0/go.mod h1:GgzwIwoRJ2UYsr3SU+JhAl+gq5j39bEMYf8ev3J+s9s=
+github.com/aws/jsii-runtime-go v1.63.2/go.mod h1:Dq2QkYFSpiHGabsCBMmLnnGkyx3lnf5k6C6fq8RN/90=
+github.com/aws/jsii-runtime-go v1.68.0/go.mod h1:91SPsitQ+dDlxHNkXqVt1C6QmPmHC32QJm4xg6F5Q+4=
 github.com/aws/jsii-runtime-go v1.95.0 h1:I43Ye2AI8YNul6aWgtsvE76Vq6K6OzDEnZa/3g+sNtM=
 github.com/aws/jsii-runtime-go v1.95.0/go.mod h1:ltYD/GbXiTKFeEUn03Ypwhl75N1Rwj4G2094XHjc+LM=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
@@ -110,6 +115,8 @@ github.com/catenacyber/perfsprint v0.7.1 h1:PGW5G/Kxn+YrN04cRAZKC+ZuvlVwolYMrIyy
 github.com/catenacyber/perfsprint v0.7.1/go.mod h1:/wclWYompEyjUD2FuIIDVKNkqz7IgBIWXIH3V0Zol50=
 github.com/ccojocar/zxcvbn-go v1.0.2 h1:na/czXU8RrhXO4EZme6eQJLR4PzcGsahsBOAwU6I3Vg=
 github.com/ccojocar/zxcvbn-go v1.0.2/go.mod h1:g1qkXtUSvHP8lhHp5GrSmTz6uWALGRMQdw6Qnz/hi60=
+github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12 v12.10.0 h1:y7heqGIJv1+G3eBLkyv5QoDygklNNvnojDC3o4c1zuA=
+github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12 v12.10.0/go.mod h1:xWfivPY/4Z+hMb6oeJZcb/0e/W54gW3hMHlq/X1IVm8=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash/v2 v2.1.1/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/cespare/xxhash/v2 v2.1.2 h1:YRXhKfTDauu4ajMg1TPgFO5jnlC2HCbmLXMcTG5cbYE=
@@ -289,6 +296,8 @@ github.com/gostaticanalysis/nilerr v0.1.1/go.mod h1:wZYb6YI5YAxxq0i1+VJbY0s2YONW
 github.com/gostaticanalysis/testutil v0.3.1-0.20210208050101-bfb5c8eec0e4/go.mod h1:D+FIZ+7OahH3ePw/izIEeH5I06eKs1IKI4Xr64/Am3M=
 github.com/gostaticanalysis/testutil v0.4.0 h1:nhdCmubdmDF6VEatUNjgUZBJKWRqugoISdUv3PPQgHY=
 github.com/gostaticanalysis/testutil v0.4.0/go.mod h1:bLIoPefWXrRi/ssLFWX1dx7Repi5x3CuviD3dgAZaBU=
+github.com/hashicorp/cdktf-provider-azurerm-go/azurerm/v2 v2.0.20 h1:JsdFAhQY+ICgueC95ik28X/0CCpru0PR2Bwt5k7eUPs=
+github.com/hashicorp/cdktf-provider-azurerm-go/azurerm/v2 v2.0.20/go.mod h1:cWbbfq4szON5oxHCFuLW15+d+Vr63WoselRKyyhReII=
 github.com/hashicorp/go-version v1.2.1/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
 github.com/hashicorp/go-version v1.6.0 h1:feTTfFNnjP967rlCxM/I9g701jU+RN74YKx2mOkIeek=
 github.com/hashicorp/go-version v1.6.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
@@ -296,6 +305,7 @@ github.com/hashicorp/golang-lru v0.5.0/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ
 github.com/hashicorp/golang-lru v0.5.1/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ4Ao+sR/qLZy8=
 github.com/hashicorp/hcl v1.0.0 h1:0Anlzjpi4vEasTeNFn2mLJgTSwt0+6sfsiTG8qcWGx4=
 github.com/hashicorp/hcl v1.0.0/go.mod h1:E5yfLk+7swimpb2L/Alb/PJmXilQ/rhwaUYs4T20WEQ=
+github.com/hashicorp/terraform-cdk-go/cdktf v0.12.3/go.mod h1:/Mke5lTQhQk5dU9wZOlaZLyGjH4PXRuln+gZM5TJDP0=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.20.5 h1:K9hKJsZU81T8gyU3RsdUyvd+jq6cjnhbTwe9P+CU604=
 github.com/hashicorp/terraform-cdk-go/cdktf v0.20.5/go.mod h1:/A1hmdqLTDUUNvWQ/Dxu4ZjEgj3FvYi2Zp3j/xMo+zA=
 github.com/hexops/gotextdiff v1.0.3 h1:gitA9+qJrrTCsiCl7+kh75nPqQt1cx4ZkudSTLoUqJM=

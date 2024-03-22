@@ -1,26 +1,28 @@
 package main
 
 import (
-	"github.com/aws/jsii-runtime-go"
-	"github.com/hashicorp/terraform-cdk-go/cdktf"
 	"testing"
+
+	"github.com/aws/jsii-runtime-go"
+	"github.com/hashicorp/cdktf-provider-azurerm-go/azurerm/v2"
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
+	"github.com/stretchr/testify/assert"
 )
 
 // The tests below are example tests, you can find more information at
 // https://cdk.tf/testing
 
-/*
-var stack = NewMyApplicationsAbstraction(cdktf.Testing_App(nil), "stack")
-var synth = cdktf.Testing_Synth(stack)
+var (
+	stack = NewCluster(cdktf.Testing_App(nil), "stack")
+	synth = cdktf.Testing_Synth(stack, jsii.Bool(true))
+)
 
-func TestShouldContainContainer(t *testing.T){
-	assertion := cdktf.Testing_ToHaveResource(synth, docker.Container_TfResourceType())
-
-	if !*assertion  {
-		t.Error("Assertion Failed")
-	}
+func TestShouldContainK8sCluster(t *testing.T) {
+	assertion := cdktf.Testing_ToHaveResource(synth, azurerm.KubernetesCluster_TfResourceType())
+	assert.True(t, *assertion)
 }
 
+/*
 func TestShouldUseUbuntuImage(t *testing.T){
 	properties := map[string]interface{}{
 		"name": "ubuntu:latest",
