@@ -1,0 +1,27 @@
+name: "Comment a Plan on a PR"
+
+on:
+    pull_request:
+        types: [opened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  terraform:
+    name: "Terraform CDK Diff"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npx cdktf-cli get
+      - uses: hashicorp/terraform-cdk-action@v3
+        with:
+          cdktfVersion: 0.20.4
+          terraformVersion: 1.7.5
+          mode: plan-only
+          stackName: aks-stack
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
