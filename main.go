@@ -17,8 +17,17 @@ type config struct {
 	// StorageAccountName is the storage account name for the backend.
 	StorageAccountName string `env:"STORAGE_ACCOUNT_NAME" envDefault:""`
 
+	// Location is the location for the backend.
+	Location string `env:"LOCATION" envDefault:"eastus"`
+
 	// ContainerName is the container name for the backend.
 	ContainerName string `env:"CONTAINER_NAME" envDefault:""`
+
+	// DNSPrefix is the DNS prefix for the AKS cluster.
+	DNSPrefix string `env:"DNS_PREFIX" envDefault:""`
+
+	// ClusterName is the name of AKS cluster.
+	ClusterName string `env:"CLUSTER_NAME" envDefault:"demo"`
 
 	// Key is the key for the backend.
 	Key string `env:"KEY" envDefault:"dev/terraform.tfstate"`
@@ -31,13 +40,27 @@ func init() {
 	}
 }
 
-func K8sStack(scope constructs.Construct, id string) cdktf.TerraformStack {
+func K8sStack(scope constructs.Construct, id string, cfg *config) cdktf.TerraformStack {
 	stack := cdktf.NewTerraformStack(scope, &id)
 
-	nodePool := kubernetescluster.NewKubernetesDefault(stack, jsii.String("node-pool"), &kubernetescluster.KubernetesClusterNodePoolConfig{})
+	nodePool := &kubernetescluster.KubernetesClusterDefaultNodePool{
+		Name:      jsii.String("default"),
+		VmSize:    jsii.String("Standard_DS2_v2"),
+		NodeCount: jsii.Number(3),
+	}
+
+	ident := &kubernetescluster.KubernetesClusterServicePrincipal{
+		ClientId:     jsii.String(""),
+		ClientSecret: jsii.String(""),
+	}
 
 	cluster := kubernetescluster.NewKubernetesCluster(scope, jsii.String("demo"), &kubernetescluster.KubernetesClusterConfig{
-		Name: jsii.String("demo"),
+		Name:              jsii.String(cfg.ClusterName),
+		DnsPrefix:         jsii.String(cfg.DNSPrefix),
+		ResourceGroupName: jsii.String(cfg.ResourceGroupName),
+		Location:          jsii.String(cfg.Location),
+		ServicePrincipal:  ident,
+		DefaultNodePool:   nodePool,
 	})
 
 	cdktf.NewTerraformOutput(stack, jsii.String("kubeconfig"), &cdktf.TerraformOutputConfig{
@@ -50,7 +73,7 @@ func K8sStack(scope constructs.Construct, id string) cdktf.TerraformStack {
 func main() {
 	app := cdktf.NewApp(nil)
 
-	stack := K8sStack(app, "example")
+	stack := K8sStack(app, "example", cfg)
 
 	cdktf.NewAzurermBackend(stack, &cdktf.AzurermBackendConfig{
 		ResourceGroupName:  jsii.String(cfg.ResourceGroupName),
