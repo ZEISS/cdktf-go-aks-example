@@ -87,8 +87,8 @@ github.com/aws/constructs-go/constructs/v10 v10.3.0 h1:LsjBIMiaDX/vqrXWhzTquBJ9p
 github.com/aws/constructs-go/constructs/v10 v10.3.0/go.mod h1:GgzwIwoRJ2UYsr3SU+JhAl+gq5j39bEMYf8ev3J+s9s=
 github.com/aws/jsii-runtime-go v1.63.2/go.mod h1:Dq2QkYFSpiHGabsCBMmLnnGkyx3lnf5k6C6fq8RN/90=
 github.com/aws/jsii-runtime-go v1.68.0/go.mod h1:91SPsitQ+dDlxHNkXqVt1C6QmPmHC32QJm4xg6F5Q+4=
-github.com/aws/jsii-runtime-go v1.95.0 h1:I43Ye2AI8YNul6aWgtsvE76Vq6K6OzDEnZa/3g+sNtM=
-github.com/aws/jsii-runtime-go v1.95.0/go.mod h1:ltYD/GbXiTKFeEUn03Ypwhl75N1Rwj4G2094XHjc+LM=
+github.com/aws/jsii-runtime-go v1.96.0 h1:ma4ee4CgkNT/OnEsnXVQQPUCwvx+3p4SYaJ9qmnZpWg=
+github.com/aws/jsii-runtime-go v1.96.0/go.mod h1:ISVfzRvqqxXAYyPKhucPCFeUjIjnqtj9QzE/77yk9pQ=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=

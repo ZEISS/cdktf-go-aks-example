@@ -9,7 +9,7 @@ require github.com/aws/constructs-go/constructs/v10 v10.3.0
 require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.5
 
 require (
-	github.com/aws/jsii-runtime-go v1.95.0
+	github.com/aws/jsii-runtime-go v1.96.0
 	github.com/caarlos0/env v3.5.0+incompatible
 	github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12 v12.10.0
 	github.com/golang/mock v1.6.0
