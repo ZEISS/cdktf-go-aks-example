@@ -6,7 +6,7 @@ toolchain go1.22.1
 
 require github.com/aws/constructs-go/constructs/v10 v10.3.0
 
-require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.5
+require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.6
 
 require (
 	github.com/aws/jsii-runtime-go v1.95.0
