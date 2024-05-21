@@ -6,12 +6,12 @@ toolchain go1.22.1
 
 require github.com/aws/constructs-go/constructs/v10 v10.3.0
 
-require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.5
+require github.com/hashicorp/terraform-cdk-go/cdktf v0.20.7
 
 require (
-	github.com/aws/jsii-runtime-go v1.95.0
+	github.com/aws/jsii-runtime-go v1.98.0
 	github.com/caarlos0/env v3.5.0+incompatible
-	github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12 v12.10.0
+	github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12 v12.17.1
 	github.com/golang/mock v1.6.0
 	github.com/golangci/golangci-lint v1.57.1
 	github.com/hashicorp/cdktf-provider-azurerm-go/azurerm/v2 v2.0.20
@@ -186,11 +186,11 @@ require (
 	golang.org/x/exp v0.0.0-20240103183307-be819d1f06fc // indirect
 	golang.org/x/exp/typeparams v0.0.0-20240314144324-c7f7c6466f7f // indirect
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
-	golang.org/x/mod v0.16.0 // indirect
-	golang.org/x/sync v0.6.0 // indirect
-	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/mod v0.17.0 // indirect
+	golang.org/x/sync v0.7.0 // indirect
+	golang.org/x/sys v0.19.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
-	golang.org/x/tools v0.19.0 // indirect
+	golang.org/x/tools v0.20.0 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
